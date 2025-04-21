@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the menu items */
+    background-color: #f2f2f2; /* Light gray background */
+    padding: 10px 0;
+}
+
+nav li {
+    display: inline-block; /* Display items horizontally */
+    margin: 0 15px; /* Add space between items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333; /* Dark gray link color */
+    font-weight: bold;
+}
+
+/* Hero section */
+#hero {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f2f2f2; /* Light gray background */
+}
+
+#hero h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* About section */
+#about {
+    padding: 30px 0;
+}
+
+#about h2 {
+    color: #333;
+    border-bottom: 2px solid #eee; /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+/* Projects section */
+#projects {
+    padding: 30px 0;
+}
+
+#projects ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
+
+#projects li {
+    margin-bottom: 10px;
+}
+
+#projects a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+/* Journal section */
+#journal {
+    padding: 30px 0;
+}
+
+/* Project Styles */
+.project {
+    margin-bottom: 40px; /* Add space between projects */
+    padding: 20px;
+    border: 1px solid #ddd; /* Add a subtle border */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.project h2 {
+    color: #333;
+}
+
+.project img {
+    max-width: 100%; /* Make images responsive */
+    height: auto;
+    display: block; /* Prevent image from overflowing */
+    margin: 20px 0;
+}
+
+.project p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.project a {
+    display: inline-block; /* Make the link a block element */
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add a smooth transition */
+}
+
+.project a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

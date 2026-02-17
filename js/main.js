@@ -122,7 +122,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===== Contact Form Submission with Thank You =====
+// ===== Contact Form — AJAX submit + inline thank-you =====
 const contactForm = document.getElementById('contact-form');
 const formSuccess = document.getElementById('form-success');
 const formResetBtn = document.getElementById('form-reset-btn');
@@ -145,7 +145,7 @@ if (contactForm) {
                 formSuccess.classList.add('show');
                 contactForm.reset();
             } else {
-                throw new Error('Form submission failed');
+                throw new Error('submission failed');
             }
         })
         .catch(() => {

@@ -657,6 +657,52 @@ ul {
     border-radius: 4px;
 }
 
+/* Featured Project Card */
+.project-card.featured {
+    border-color: rgba(0, 212, 255, 0.3);
+    background: linear-gradient(135deg, var(--bg-card), rgba(0, 212, 255, 0.05));
+}
+
+.project-card.featured::before {
+    opacity: 1;
+}
+
+.project-status {
+    display: inline-block;
+    background: rgba(50, 205, 50, 0.12);
+    color: #50d050;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    padding: 3px 12px;
+    border-radius: 50px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(50, 205, 50, 0.2);
+}
+
+.project-link-btn {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 212, 255, 0.2);
+    transition: all var(--transition);
+}
+
+.project-link-btn:hover {
+    background: rgba(0, 212, 255, 0.25);
+    color: #fff;
+}
+
+.project-links {
+    display: flex;
+    gap: 8px;
+}
+
 /* ===== Education ===== */
 .education-content {
     display: grid;
@@ -1036,6 +1082,54 @@ ul {
 .contact-form textarea {
     resize: vertical;
     min-height: 120px;
+}
+
+/* Form Success State */
+.contact-form-wrapper {
+    position: relative;
+}
+
+.form-success {
+    display: none;
+    text-align: center;
+    padding: 48px 24px;
+    animation: fadeUp 0.5s ease;
+}
+
+.form-success.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(0, 212, 255, 0.12);
+    color: var(--accent);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--accent);
+    margin-bottom: 8px;
+}
+
+.form-success h3 {
+    font-size: 1.4rem;
+}
+
+.form-success p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    max-width: 360px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Footer ===== */

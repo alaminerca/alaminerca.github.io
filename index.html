@@ -135,6 +135,23 @@
                 </div>
             </div>
 
+            <div class="research-current">
+                <div class="research-badge">Paper in Progress</div>
+                <h3>SangoNMT: Fine-Tuning NLLB-200 for Sango-French Machine Translation</h3>
+                <p>Building the first dedicated NLP resources for Sango, the national language of the Central African Republic (5.5M speakers). Created a novel 21,125-pair parallel corpus, fine-tuned NLLB-200 with LoRA to achieve +832% BLEU improvement, and built a translation + speech demo. First Sango-specific NLP system reported in the literature.</p>
+                <div class="research-tech">
+                    <span class="tech-tag">NLLB-200</span>
+                    <span class="tech-tag">LoRA</span>
+                    <span class="tech-tag">HuggingFace</span>
+                    <span class="tech-tag">MMS-TTS</span>
+                    <span class="tech-tag">Low-Resource NLP</span>
+                </div>
+                <div class="research-future">
+                    <h4>Links</h4>
+                    <p><a href="https://huggingface.co/spaces/alaminerca/sango-french-translator" target="_blank" rel="noopener">Live Demo</a> &bull; <a href="https://huggingface.co/alaminerca/nllb-sango-french" target="_blank" rel="noopener">Model Weights</a></p>
+                </div>
+            </div>
+
             <div class="research-interests">
                 <div class="interests-group">
                     <h3>Primary Interests</h3>
@@ -164,6 +181,26 @@
         <div class="container">
             <h2 class="section-title"><span class="accent">//</span> Projects</h2>
             <div class="projects-grid">
+
+                <div class="project-card featured fade-in">
+                    <div class="project-header">
+                        <div class="project-icon">&#127760;</div>
+                        <div class="project-links">
+                            <a href="https://huggingface.co/spaces/alaminerca/sango-french-translator" target="_blank" rel="noopener" aria-label="Live Demo" class="project-link-btn">Live Demo</a>
+                            <a href="https://huggingface.co/alaminerca/nllb-sango-french" target="_blank" rel="noopener" aria-label="Model" class="project-link-btn">Model</a>
+                        </div>
+                    </div>
+                    <div class="project-status">Paper in Progress</div>
+                    <h3>SangoNMT: Sango-French Machine Translation</h3>
+                    <p>First dedicated Sango-French NLP system. Built a novel 21,125-pair parallel corpus from Bible texts, fine-tuned NLLB-200 with LoRA achieving +832% BLEU improvement (2.38 &rarr; 22.21). Integrated with Meta's MMS-TTS for Sango speech synthesis. All resources publicly released.</p>
+                    <div class="project-tags">
+                        <span>NLP</span>
+                        <span>NLLB-200</span>
+                        <span>LoRA</span>
+                        <span>HuggingFace</span>
+                        <span>Low-Resource MT</span>
+                    </div>
+                </div>
 
                 <div class="project-card fade-in">
                     <div class="project-header">
@@ -373,12 +410,20 @@
                         <span>+966 544 706 908</span>
                     </a>
                 </div>
-                <form class="contact-form" action="https://formspree.io/f/xaqdjdad" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xaqdjdad" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary" id="form-submit-btn">Send Message</button>
+                    </form>
+                    <div class="form-success" id="form-success">
+                        <div class="success-icon">&#10003;</div>
+                        <h3>Thank you!</h3>
+                        <p>Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+                        <button class="btn btn-outline" id="form-reset-btn">Send Another Message</button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

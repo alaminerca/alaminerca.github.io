@@ -1,0 +1,13 @@
+# Private development folder (not pushed to GitHub)
+_dev/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

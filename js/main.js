@@ -4,6 +4,7 @@ const typingPhrases = [
     "CS Student",
     "Reinforcement Learning Enthusiast",
     "Robotics & Embedded AI",
+    "Low-Resource NLP",
     "Community Advocate"
 ];
 
@@ -120,3 +121,46 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// ===== Contact Form Submission with Thank You =====
+const contactForm = document.getElementById('contact-form');
+const formSuccess = document.getElementById('form-success');
+const formResetBtn = document.getElementById('form-reset-btn');
+const formSubmitBtn = document.getElementById('form-submit-btn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        formSubmitBtn.textContent = 'Sending...';
+        formSubmitBtn.disabled = true;
+
+        fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                contactForm.style.display = 'none';
+                formSuccess.classList.add('show');
+                contactForm.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        })
+        .catch(() => {
+            formSubmitBtn.textContent = 'Something went wrong. Try again.';
+            formSubmitBtn.disabled = false;
+            setTimeout(() => { formSubmitBtn.textContent = 'Send Message'; }, 3000);
+        });
+    });
+}
+
+if (formResetBtn) {
+    formResetBtn.addEventListener('click', function() {
+        formSuccess.classList.remove('show');
+        contactForm.style.display = 'flex';
+        formSubmitBtn.textContent = 'Send Message';
+        formSubmitBtn.disabled = false;
+    });
+}
